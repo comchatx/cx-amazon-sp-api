@@ -1,0 +1,61 @@
+{
+  "name": "cx-amazon-sp-api",
+  "version": "0.1.5",
+  "description": "Reads and updates your own Amazon store.",
+  "license": "MIT",
+  "author": "ComChatX",
+  "homepage": "https://github.com/comchatx/cx-amazon-sp-api#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comchatx/cx-amazon-sp-api.git"
+  },
+  "bugs": "https://github.com/comchatx/cx-amazon-sp-api/issues",
+  "keywords": [
+    "pi-package"
+  ],
+  "type": "module",
+  "pi": {
+    "skills": [
+      "./skills"
+    ]
+  },
+  "files": [
+    "skills"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "comchatx": {
+    "name": "Amazon SP-API",
+    "about": "读取并更新你自己的亚马逊店铺。",
+    "description": "授权后，cx 可以通过亚马逊 SP-API 访问你的店铺，范围以你授权的站点为限。cx 可以读取订单、listing、库存和报告，并在授权范围内进行修改。亚马逊和 ComChatX 均不为此收费。",
+    "mark": {
+      "line": "layout"
+    },
+    "section": "data",
+    "order": 20,
+    "builds": [
+      "cx-sources"
+    ],
+    "skills": {
+      "amazon-sp-api": {
+        "about": {
+          "en": "Connects cx to your orders, listings, inventory, reports and finances.",
+          "zh": "连接 cx 与你的订单、Listing、库存、报告和财务数据。"
+        }
+      }
+    },
+    "source": {
+      "name": "amazon-sp-api",
+      "help": "https://developer-docs.amazon/sp-api/docs/self-authorization",
+      "aspects": {}
+    }
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "1.4.0",
+    "@types/node": "26.2.0",
+    "typescript": "7.0.2",
+    "vitest": "4.1.11"
+  }
+}

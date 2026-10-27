@@ -1,0 +1,1 @@
+Lets cx work in your own Amazon store through Amazon's SP-API, in the marketplaces you authorise. cx can read your orders, listings, inventory and reports, and can make changes within what you authorise. Neither Amazon nor ComChatX charges for it.
