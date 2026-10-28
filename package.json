@@ -1,6 +1,6 @@
 {
   "name": "cx-amazon-sp-api",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Reads and updates your own Amazon store.",
   "license": "MIT",
   "author": "ComChatX",
@@ -17,10 +17,15 @@
   "pi": {
     "skills": [
       "./skills"
+    ],
+    "prompts": [
+      "./prompts"
     ]
   },
   "files": [
-    "skills"
+    "skills",
+    "prompts",
+    "README.zh-CN.md"
   ],
   "scripts": {
     "typecheck": "tsc --noEmit",
@@ -28,22 +33,28 @@
   },
   "comchatx": {
     "name": "Amazon SP-API",
-    "about": "读取并更新你自己的亚马逊店铺。",
-    "description": "授权后，cx 可以通过亚马逊 SP-API 访问你的店铺，范围以你授权的站点为限。cx 可以读取订单、listing、库存和报告，并在授权范围内进行修改。亚马逊和 ComChatX 均不为此收费。",
+    "description": {
+      "zh": "读取并更新你自己的亚马逊店铺。"
+    },
     "mark": {
       "line": "layout"
     },
     "section": "data",
     "order": 20,
-    "builds": [
-      "cx-sources"
-    ],
     "skills": {
       "amazon-sp-api": {
-        "about": {
-          "en": "Connects cx to your orders, listings, inventory, reports and finances.",
-          "zh": "连接 cx 与你的订单、Listing、库存、报告和财务数据。"
-        }
+        "zh": "通过 SP-API 读取和修改你自己的亚马逊店铺：订单、Listing、库存、报告、Feed 和财务数据，覆盖你授权的每个区域。"
+      }
+    },
+    "prompts": {
+      "orders-today": {
+        "zh": "按站点查看店铺今天的订单"
+      },
+      "low-stock": {
+        "zh": "找出两周内会断货的 FBA Listing"
+      },
+      "listing-check": {
+        "zh": "检查 Listing 上亚马逊标出的问题，并给出修复方案"
       }
     },
     "source": {
@@ -51,6 +62,9 @@
       "help": "https://developer-docs.amazon/sp-api/docs/self-authorization",
       "aspects": {}
     }
+  },
+  "dependencies": {
+    "cx-sources": "^0.1.3"
   },
   "devDependencies": {
     "@earendil-works/pi-coding-agent": "1.4.0",
