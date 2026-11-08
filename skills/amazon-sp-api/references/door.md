@@ -52,7 +52,7 @@ A report is asked for with `POST /reports/2021-06-30/reports`, its `reportType` 
 
 ## The seller's application
 
-The developer application behind the client pair needs three roles: Product Listing, Pricing and Brand Analytics. Amazon refuses a path outside the application's roles.
+The developer application behind the client pair needs four roles: Product Listing, Pricing, Brand Analytics, and Finance and Accounting, the one role Amazon's Role Mappings for SP-API Operations names for the Finances API's `listTransactions`. Amazon refuses a path outside the application's roles.
 
 The door has no sandbox default and no write switch: a call goes to the origin it names, production or sandbox, and a change is sent as a read is.
 
