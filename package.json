@@ -1,6 +1,6 @@
 {
   "name": "cx-amazon-sp-api",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Reads and updates your own Amazon store.",
   "license": "MIT",
   "author": "ComChatX",
