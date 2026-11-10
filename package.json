@@ -1,7 +1,7 @@
 {
   "name": "cx-amazon-sp-api",
-  "version": "0.1.8",
-  "description": "Reads and updates your own Amazon store.",
+  "version": "0.1.9",
+  "description": "Checks orders, stock and fees, and edits listings and prices.",
   "license": "MIT",
   "author": "ComChatX",
   "homepage": "https://github.com/comchatx/cx-amazon-sp-api#readme",
@@ -33,7 +33,7 @@
   },
   "comchatx": {
     "name": "Amazon SP-API",
-    "about": "读取并更新你自己的亚马逊店铺。",
+    "about": "查订单、库存和费用，替你改 listing 和价格。",
     "mark": {
       "line": "layout"
     },

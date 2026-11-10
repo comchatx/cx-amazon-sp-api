@@ -1,20 +1,18 @@
-# Amazon SP-API
-
-This plugin connects cx to your own Amazon store through Amazon's Selling Partner API (SP-API). Once you connect a store, cx can read your orders, listings, inventory, reports and finances, and make changes in the marketplaces you authorised, such as updating a listing or a price.
+cx totals orders and sales by marketplace, finds FBA stock about to run out and listings Amazon flags, breaks down each transaction's fees, and changes listings and prices. It reads Amazon's SP-API, in the regions you authorise.
 
 Some things you can ask:
 
-- How many orders came in today, and which are pending or cancelled?
-- Which of my FBA listings will run out of stock in the next two weeks?
-- What is wrong with this listing, and how do I fix it?
+- What were B0EXAMPLE1's traffic and conversion rate last week?
+- Change B0EXAMPLE1's price on Amazon US to $24.99.
+- Which fees did Amazon take from last month's sales?
 
 ## Connecting your store
 
-Open the plugin's Settings and connect a store for each region you sell in: North America, Europe or the Far East. Amazon's guide to self-authorisation shows where to find what Settings asks for. Your keys stay on the ComChatX platform and are never given to cx.
+On the plugin's Settings, connect a store for each region you sell in: North America, Europe or the Far East. Amazon's guide to self-authorisation shows where to find what Settings asks for. Your keys stay with ComChatX and are never given to cx.
 
 ## What it costs
 
-Nothing. Neither Amazon nor ComChatX charges for SP-API calls.
+Nothing. Neither Amazon nor ComChatX charges for it.
 
 ## What it needs
 
