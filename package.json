@@ -1,6 +1,6 @@
 {
   "name": "cx-amazon-sp-api",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Reads and updates your own Amazon store.",
   "license": "MIT",
   "author": "ComChatX",
@@ -33,9 +33,7 @@
   },
   "comchatx": {
     "name": "Amazon SP-API",
-    "description": {
-      "zh": "读取并更新你自己的亚马逊店铺。"
-    },
+    "about": "读取并更新你自己的亚马逊店铺。",
     "mark": {
       "line": "layout"
     },
