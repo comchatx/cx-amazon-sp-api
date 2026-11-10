@@ -41,3 +41,27 @@ it("ships its skills, its templates, its READMEs and its license, and nothing el
   expect(packed[0]!.files.map((file) => file.path).sort()).toEqual(["LICENSE", "README.md", "README.zh-CN.md", "package.json", ...shipped].sort());
   expect(manifest.files).toEqual(["skills", "prompts", "README.zh-CN.md"]);
 });
+
+const SKILL = readFileSync(join(ROOT, "skills", "amazon-sp-api", "SKILL.md"), "utf8");
+const DOOR = readFileSync(join(ROOT, "skills", "amazon-sp-api", "references", "door.md"), "utf8");
+
+it("names the five roles the developer application needs, Amazon Fulfillment among them", () => {
+  const listed = /needs (\w+) roles: ([^.]+)\./.exec(DOOR);
+  expect(listed?.[1]).toBe("five");
+  expect(listed![2]!.replace(/, and |, /g, "|").split("|")).toEqual(["Product Listing", "Pricing", "Brand Analytics", "Finance and Accounting", "Amazon Fulfillment"]);
+});
+
+it("reads orders in its example with Orders 2026-01-01 searchOrders, not the v0 reads Amazon removes", () => {
+  const example = /```sh\n(.+)\n```/.exec(SKILL)![1]!;
+  expect(/--path (\S+)/.exec(example)![1]).toBe("/orders/2026-01-01/orders");
+  expect(SKILL).not.toMatch(/--path \/orders\/v0\//);
+});
+
+it("states Amazon's own qualifications: grantless operations outside the seller and application rate, the datasets' roles as Amazon corrected them, and the Outbound operation Product Listing opens too", () => {
+  expect(DOOR).toMatch(/most operations are rated for each seller and application, grantless operations being the exception/);
+  expect(DOOR).not.toMatch(/rates each operation by a token bucket for each seller and application/);
+  expect(DOOR).toMatch(/The Usage Plans and Rate Limits page states no `Retry-After` header\./);
+  expect(DOOR).toMatch(/the Economics dataset needs Selling Partner Insights/);
+  expect(DOOR).not.toMatch(/Brand Analytics for each dataset/);
+  expect(DOOR).toMatch(/except `cancelFulfillmentOrder`, which that page names for Product Listing as well/);
+});

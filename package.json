@@ -1,6 +1,6 @@
 {
   "name": "cx-amazon-sp-api",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "Checks orders, stock and fees, and edits listings and prices.",
   "license": "MIT",
   "author": "ComChatX",
