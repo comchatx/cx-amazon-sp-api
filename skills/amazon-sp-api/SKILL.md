@@ -6,8 +6,10 @@ description: The seller's own Amazon selling account through Amazon's Selling Pa
 Amazon SP-API is an open door through `cx raw`; read cx-sources first. The door carries any method, path, query, header and body to the origin the request names, attaches the seller's token, and lands Amazon's reply as Amazon gave it, at no charge. If Amazon SP-API is off, the seller turns its plugin on in Plugins.
 
 ```sh
-cx raw amazon-sp-api --origin https://sellingpartnerapi-na.amazon.com --method GET --path /orders/v0/orders --query MarketplaceIds=ATVPDKIKX0DER --query CreatedAfter=2026-10-01T00:00:00Z
+cx raw amazon-sp-api --origin https://sellingpartnerapi-na.amazon.com --method GET --path /orders/2026-01-01/orders --query marketplaceIds=ATVPDKIKX0DER --query createdAfter=2026-10-01T00:00:00Z
 ```
+
+That is the Orders API's `searchOrders` (2026-01-01), rated 0.0056 requests a second, burst 20, in its model; it takes exactly one of `createdAfter` and `lastUpdatedAfter`. The Orders v0 reads, `/orders/v0/orders` among them, are removed on 2027-03-27.
 
 Amazon's reference: <https://developer-docs.amazon.com/sp-api>, models at <https://github.com/amzn/selling-partner-api-models>.
 
