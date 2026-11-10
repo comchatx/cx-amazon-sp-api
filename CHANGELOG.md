@@ -6,6 +6,7 @@
 - The skill's example reads orders with the Orders API's `searchOrders` (2026-01-01), rated 0.0056 a second, burst 20; the Orders v0 reads it used are removed on 2027-03-27.
 - The door's reference states the Reports API's lifecycle (create, status, document, list), how long a report and its document URL stay, that settlement reports cannot be requested and the two older settlement reports go on 2026-11-11, and Data Kiosk's query limits.
 - A `429` is stated as Amazon states it, with no wait of the skill's own; `getPricing`'s required parameters and its `404` to a query written wrong are stated.
+- The door's reference says what Amazon qualifies: most operations, not grantless ones, are rated for each seller and application; the Economics dataset needs Selling Partner Insights, as Amazon corrected; and Product Listing opens the Fulfillment Outbound API's `cancelFulfillmentOrder` too.
 - The sentence that limited reading the whole store's orders to when the seller asks is gone, as ComChatX's decision D233 rules.
 
 ## 0.1.9

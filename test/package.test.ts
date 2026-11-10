@@ -56,3 +56,12 @@ it("reads orders in its example with Orders 2026-01-01 searchOrders, not the v0 
   expect(/--path (\S+)/.exec(example)![1]).toBe("/orders/2026-01-01/orders");
   expect(SKILL).not.toMatch(/--path \/orders\/v0\//);
 });
+
+it("states Amazon's own qualifications: grantless operations outside the seller and application rate, the datasets' roles as Amazon corrected them, and the Outbound operation Product Listing opens too", () => {
+  expect(DOOR).toMatch(/most operations are rated for each seller and application, grantless operations being the exception/);
+  expect(DOOR).not.toMatch(/rates each operation by a token bucket for each seller and application/);
+  expect(DOOR).toMatch(/The Usage Plans and Rate Limits page states no `Retry-After` header\./);
+  expect(DOOR).toMatch(/the Economics dataset needs Selling Partner Insights/);
+  expect(DOOR).not.toMatch(/Brand Analytics for each dataset/);
+  expect(DOOR).toMatch(/except `cancelFulfillmentOrder`, which that page names for Product Listing as well/);
+});
