@@ -36,7 +36,10 @@ it("the pinned pi lists the package's skills and templates as its manifest names
 });
 
 it("ships its skills, its templates, its READMEs and its license, and nothing else", () => {
-  const packed = JSON.parse(execFileSync("npm", ["pack", "--dry-run", "--json", "--ignore-scripts"], { cwd: ROOT, encoding: "utf8" })) as { files: { path: string }[] }[];
+  type Packed = { files: { path: string }[] };
+  // npm 11 answers a list of packs and npm 12 an object keyed by the package's name.
+  const answer = JSON.parse(execFileSync("npm", ["pack", "--dry-run", "--json", "--ignore-scripts"], { cwd: ROOT, encoding: "utf8" })) as Packed[] | Record<string, Packed>;
+  const packed = Array.isArray(answer) ? answer : Object.values(answer);
   const shipped = ["skills", "prompts"].flatMap((directory) => walk(join(ROOT, directory)).map((path) => relative(ROOT, path)));
   expect(packed[0]!.files.map((file) => file.path).sort()).toEqual(["LICENSE", "README.md", "README.zh-CN.md", "package.json", ...shipped].sort());
   expect(manifest.files).toEqual(["skills", "prompts", "README.zh-CN.md"]);
@@ -64,4 +67,18 @@ it("states Amazon's own qualifications: grantless operations outside the seller 
   expect(DOOR).toMatch(/the Economics dataset needs Selling Partner Insights/);
   expect(DOOR).not.toMatch(/Brand Analytics for each dataset/);
   expect(DOOR).toMatch(/except `cancelFulfillmentOrder`, which that page names for Product Listing as well/);
+});
+
+it("declares its source in the shape the platform's catalogue reads: each field's label under `label`, each line in English and Chinese", () => {
+  const source = (JSON.parse(readFileSync(join(ROOT, "package.json"), "utf8")) as { comchatx: { source: { fields: Record<string, Record<string, unknown>>; lines: Record<string, unknown> } } }).comchatx.source;
+  const words = (value: unknown): boolean => typeof value === "object" && value !== null && Object.keys(value).sort().join() === "en,zh"
+    && Object.values(value).every((one) => typeof one === "string" && one.length > 0);
+  expect(Object.keys(source.fields)).toEqual(["client_id", "client_secret", "refresh_token"]);
+  for (const [field, declared] of Object.entries(source.fields)) {
+    // The catalogue reads `label` and `help` under a field and nothing else: a field declared otherwise drops the whole source.
+    expect(Object.keys(declared).every((key) => key === "label" || key === "help"), field).toBe(true);
+    expect(words(declared["label"]), field).toBe(true);
+  }
+  expect(Object.keys(source.lines)).toEqual(["add", "removedWith"]);
+  for (const [place, line] of Object.entries(source.lines)) expect(words(line), place).toBe(true);
 });

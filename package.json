@@ -1,6 +1,6 @@
 {
   "name": "cx-amazon-sp-api",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "Checks orders, stock and fees, and edits listings and prices.",
   "license": "MIT",
   "author": "ComChatX",
@@ -58,7 +58,37 @@
     "source": {
       "name": "amazon-sp-api",
       "help": "https://developer-docs.amazon/sp-api/docs/self-authorization",
-      "aspects": {}
+      "aspects": {},
+      "fields": {
+        "client_id": {
+          "label": {
+            "en": "Client identifier",
+            "zh": "Client identifier"
+          }
+        },
+        "client_secret": {
+          "label": {
+            "en": "Client secret",
+            "zh": "Client secret"
+          }
+        },
+        "refresh_token": {
+          "label": {
+            "en": "Refresh token",
+            "zh": "Refresh token"
+          }
+        }
+      },
+      "lines": {
+        "add": {
+          "en": "Add a store",
+          "zh": "添加店铺"
+        },
+        "removedWith": {
+          "en": "Its stores {names} are removed with it.",
+          "zh": "它的店铺 {names} 会一并移除。"
+        }
+      }
     }
   },
   "dependencies": {
