@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.11
+
+- `comchatx.source` names each field's label in English and Chinese, as the account's page draws it: "Client identifier", "Client secret" and "Refresh token". The page used the field's own key.
+- `comchatx.source.lines` holds the page's words for the store list, in English and Chinese: the add button, "Add a store", and the line saying a removed refresh token takes its stores with it. They are the words of the signed prototype.
+
 ## 0.1.10
 
 - The door's reference names a fifth role for the developer application, Amazon Fulfillment, and what Amazon's Role Mappings say it opens: the Fulfillment Inbound, FBA Inbound Eligibility and Fulfillment Outbound APIs, and the inventory ledger, inventory planning, AFN inventory, overage fee, customer shipment sales and seller feedback reports. A role added to the application reaches a store once the store authorises it again.
