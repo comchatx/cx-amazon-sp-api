@@ -68,3 +68,17 @@ it("states Amazon's own qualifications: grantless operations outside the seller 
   expect(DOOR).not.toMatch(/Brand Analytics for each dataset/);
   expect(DOOR).toMatch(/except `cancelFulfillmentOrder`, which that page names for Product Listing as well/);
 });
+
+it("declares its source in the shape the platform's catalogue reads: each field's label under `label`, each line in English and Chinese", () => {
+  const source = (JSON.parse(readFileSync(join(ROOT, "package.json"), "utf8")) as { comchatx: { source: { fields: Record<string, Record<string, unknown>>; lines: Record<string, unknown> } } }).comchatx.source;
+  const words = (value: unknown): boolean => typeof value === "object" && value !== null && Object.keys(value).sort().join() === "en,zh"
+    && Object.values(value).every((one) => typeof one === "string" && one.length > 0);
+  expect(Object.keys(source.fields)).toEqual(["client_id", "client_secret", "refresh_token"]);
+  for (const [field, declared] of Object.entries(source.fields)) {
+    // The catalogue reads `label` and `help` under a field and nothing else: a field declared otherwise drops the whole source.
+    expect(Object.keys(declared).every((key) => key === "label" || key === "help"), field).toBe(true);
+    expect(words(declared["label"]), field).toBe(true);
+  }
+  expect(Object.keys(source.lines)).toEqual(["add", "removedWith"]);
+  for (const [place, line] of Object.entries(source.lines)) expect(words(line), place).toBe(true);
+});

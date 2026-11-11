@@ -2,7 +2,7 @@
 
 ## 0.1.11
 
-- `comchatx.source` names each field's label in English and Chinese, as the account's page draws it: "Client identifier", "Client secret" and "Refresh token". The page used the field's own key.
+- `comchatx.source.fields.<field>.label` names each field in English and Chinese, as the account's page draws it: "Client identifier", "Client secret" and "Refresh token". The page used the field's own key.
 - `comchatx.source.lines` holds the page's words for the store list, in English and Chinese: the add button, "Add a store", and the line saying a removed refresh token takes its stores with it. They are the words of the signed prototype.
 
 ## 0.1.10

@@ -61,16 +61,22 @@
       "aspects": {},
       "fields": {
         "client_id": {
-          "en": "Client identifier",
-          "zh": "Client identifier"
+          "label": {
+            "en": "Client identifier",
+            "zh": "Client identifier"
+          }
         },
         "client_secret": {
-          "en": "Client secret",
-          "zh": "Client secret"
+          "label": {
+            "en": "Client secret",
+            "zh": "Client secret"
+          }
         },
         "refresh_token": {
-          "en": "Refresh token",
-          "zh": "Refresh token"
+          "label": {
+            "en": "Refresh token",
+            "zh": "Refresh token"
+          }
         }
       },
       "lines": {
