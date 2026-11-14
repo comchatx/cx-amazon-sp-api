@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.12
+
+- `comchatx.source.lines` holds five more of the page's words for the store list, in English and Chinese: the heading of the first form, "Connect your store", the line under it on what cx can do once connected, the list's heading, "Stores", "Checking with Amazon…" while Amazon is asked, and "Sells in {places}" under a store, `{places}` the countries it sells in. They are the platform's signed words for those places, moved as they are.
+- `comchatx.source.regions` names Amazon's three regions, North America, Europe and Far East, in English and Chinese, as the page names them.
+
 ## 0.1.11
 
 - `comchatx.source.fields.<field>.label` names each field in English and Chinese, as the account's page draws it: "Client identifier", "Client secret" and "Refresh token". The page used the field's own key.

@@ -1,6 +1,6 @@
 {
   "name": "cx-amazon-sp-api",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "Checks orders, stock and fees, and edits listings and prices.",
   "license": "MIT",
   "author": "ComChatX",
@@ -87,6 +87,40 @@
         "removedWith": {
           "en": "Its stores {names} are removed with it.",
           "zh": "它的店铺 {names} 会一并移除。"
+        },
+        "connect": {
+          "en": "Connect your store",
+          "zh": "连接店铺"
+        },
+        "canChange": {
+          "en": "Once connected, cx can read and change your store.",
+          "zh": "连接后，cx 可以读取和修改你的店铺。"
+        },
+        "rows": {
+          "en": "Stores",
+          "zh": "店铺"
+        },
+        "checking": {
+          "en": "Checking with Amazon…",
+          "zh": "正在向亚马逊确认…"
+        },
+        "sells": {
+          "en": "Sells in {places}",
+          "zh": "在{places}销售"
+        }
+      },
+      "regions": {
+        "na": {
+          "en": "North America",
+          "zh": "北美"
+        },
+        "eu": {
+          "en": "Europe",
+          "zh": "欧洲"
+        },
+        "fe": {
+          "en": "Far East",
+          "zh": "远东"
         }
       }
     }
