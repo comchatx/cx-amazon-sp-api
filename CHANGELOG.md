@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.13
+
+- `comchatx.source.lines` holds four more of the page's words for the store list, in English and Chinese, signed on 2026-11-13: the line when Amazon's check finds no store for a token, "Store connected." once a store passes, the line under a store whose refresh token Amazon no longer accepts, and the line under a store for which Amazon listed no marketplace. The page prints no line of its own in those places.
+
 ## 0.1.12
 
 - `comchatx.source.lines` holds five more of the page's words for the store list, in English and Chinese: the heading of the first form, "Connect your store", the line under it on what cx can do once connected, the list's heading, "Stores", "Checking with Amazon…" while Amazon is asked, and "Sells in {places}" under a store, `{places}` the countries it sells in. They are the platform's signed words for those places, moved as they are.

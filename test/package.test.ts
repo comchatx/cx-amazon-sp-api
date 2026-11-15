@@ -81,7 +81,7 @@ it("declares its source in the shape the platform's catalogue reads: each field'
     expect(Object.keys(declared).every((key) => key === "label" || key === "help"), field).toBe(true);
     expect(words(declared["label"]), field).toBe(true);
   }
-  expect(Object.keys(source.lines)).toEqual(["add", "removedWith", "connect", "canChange", "rows", "checking", "sells"]);
+  expect(Object.keys(source.lines)).toEqual(["add", "removedWith", "connect", "canChange", "rows", "checking", "sells", "foundNone", "connected", "refused", "none"]);
   for (const [place, line] of Object.entries(source.lines)) expect(words(line), place).toBe(true);
   // The catalogue fills a line's one placeholder and refuses a line that holds any other: "Sells in {places}" holds its places once in each language.
   const holds = (line: unknown): readonly string[] => Object.values(line as Record<string, string>).map((said) => [...said.matchAll(/\{([a-z]+)\}/g)].map((one) => one[1]).join());
