@@ -1,6 +1,6 @@
 {
   "name": "cx-amazon-sp-api",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "Checks orders, stock and fees, and edits listings and prices.",
   "license": "MIT",
   "author": "ComChatX",
@@ -107,6 +107,22 @@
         "sells": {
           "en": "Sells in {places}",
           "zh": "在{places}销售"
+        },
+        "foundNone": {
+          "en": "Amazon found no store for this token; get a new one with the Amazon account you sell with.",
+          "zh": "亚马逊没有找到店铺，请用开店的亚马逊账号获取新的 Refresh token。"
+        },
+        "connected": {
+          "en": "Store connected.",
+          "zh": "店铺已连接。"
+        },
+        "refused": {
+          "en": "Amazon no longer accepts this refresh token. Add a new one, then remove this one.",
+          "zh": "亚马逊已不接受这个 Refresh token，请添加新的，再移除这一行。"
+        },
+        "none": {
+          "en": "Amazon listed no marketplace for this store.",
+          "zh": "亚马逊没有列出这家店铺的站点。"
         }
       },
       "regions": {
