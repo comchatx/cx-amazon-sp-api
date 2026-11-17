@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.14
+
+- The card's name is the one signed on 2026-11-17: "Amazon SP-API" on the English page (`comchatx.name`) and 「亚马逊卖家接口」 on the Chinese page (`comchatx.nameZh`).
+
 ## 0.1.13
 
 - `comchatx.source.lines` holds four more of the page's words for the store list, in English and Chinese, signed on 2026-11-13: the line when Amazon's check finds no store for a token, "Store connected." once a store passes, the line under a store whose refresh token Amazon no longer accepts, and the line under a store for which Amazon listed no marketplace. The page prints no line of its own in those places.
