@@ -1,6 +1,6 @@
 {
   "name": "cx-amazon-sp-api",
-  "version": "0.1.14",
+  "version": "0.1.15",
   "description": "Checks orders, stock and fees, and edits listings and prices.",
   "license": "MIT",
   "author": "ComChatX",
@@ -42,7 +42,8 @@
     "order": 20,
     "skills": {
       "amazon-sp-api": {
-        "zh": "通过 SP-API 读取和修改你自己的亚马逊店铺：订单、Listing、库存、报告、Feed 和财务数据，覆盖你授权的每个区域。"
+        "zh": "读取和修改你的亚马逊店铺：订单、listing、库存和财务。",
+        "en": "Reads and changes your Amazon store: orders, listings, stock and finances."
       }
     },
     "prompts": {
@@ -50,12 +51,22 @@
         "zh": "按站点查看店铺今天的订单"
       },
       "low-stock": {
-        "zh": "找出两周内会断货的 FBA Listing"
+        "zh": "找出两周内会断货的 FBA listing"
       },
       "listing-check": {
-        "zh": "检查 Listing 上亚马逊标出的问题，并给出修复方案"
+        "zh": "检查【SKU】这条 listing 上亚马逊标出的问题，并给出修复方案"
       }
     },
+    "builds": [
+      {
+        "on": "cx-amazon-seller",
+        "need": "optional",
+        "why": {
+          "en": "Tells cx from the start that you sell on Amazon.",
+          "zh": "用于让 cx 从第一条消息起就知道你在亚马逊开店。"
+        }
+      }
+    ],
     "source": {
       "name": "amazon-sp-api",
       "help": "https://developer-docs.amazon/sp-api/docs/self-authorization",

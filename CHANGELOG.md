@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.15
+
+- The README's first paragraph, in Chinese, is the one signed on 2026-11-18 (「把你的亚马逊店铺连到 cx，……覆盖你在北美、欧洲和远东授权的站点。」), and in English the paragraph of the same meaning ("Connect your Amazon store to cx … in the regions you authorise.").
+- The README's "What it needs" section leaves, in both languages, heading and all, as signed on 2026-11-18. The Plugins page draws what installs with it.
+- `comchatx.builds` names `cx-amazon-seller` as optional, with the reason signed on 2026-11-18: "Tells cx from the start that you sell on Amazon." / 「用于让 cx 从第一条消息起就知道你在亚马逊开店。」
+- The skill's line is the one signed on 2026-11-17, in `comchatx.skills.amazon-sp-api` as `zh` 「读取和修改你的亚马逊店铺：订单、listing、库存和财务。」 and `en` "Reads and changes your Amazon store: orders, listings, stock and finances.". `SKILL.md`'s `description` is unchanged.
+- The templates read the lines signed on 2026-11-17: `listing-check` "Check [SKU]'s listing for the issues Amazon flags, and propose fixes" / 「检查【SKU】这条 listing 上亚马逊标出的问题，并给出修复方案」; `low-stock`'s Chinese writes listing in lower case, 「找出两周内会断货的 FBA listing」; `orders-today`'s English is "See today's orders in my store, marketplace by marketplace".
+
 ## 0.1.14
 
 - The card's name is the one signed on 2026-11-17: "Amazon SP-API" on the English page (`comchatx.name`) and 「亚马逊卖家接口」 on the Chinese page (`comchatx.nameZh`).
