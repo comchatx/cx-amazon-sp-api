@@ -4,6 +4,7 @@
 
 - The card's name is the one signed on 2026-11-17: "Amazon SP-API" on the English page (`comchatx.name`) and 「亚马逊卖家接口」 on the Chinese page (`comchatx.nameZh`).
 - The README names each other plugin it speaks of by the card's name in its own language, a link to that plugin's page on npm, never by the npm name.
+- It names Amazon Core (`cx-amazon-seller`, `^0.1.7`) in `dependencies`, so installing it brings Amazon Core with it.
 
 ## 0.1.13
 
