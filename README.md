@@ -16,4 +16,4 @@ Nothing. Neither Amazon nor ComChatX charges for it.
 
 ## What it needs
 
-It installs with cx-sources, through which cx reaches every data source.
+It installs with [Data Source Core](https://www.npmjs.com/package/cx-sources), through which cx reaches every data source.

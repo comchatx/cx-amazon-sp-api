@@ -16,4 +16,4 @@ cx 能按站点汇总订单和销售额，找出快断货的 FBA 商品和被亚
 
 ## 需要
 
-它会和 cx-sources 一起安装，cx 通过 cx-sources 使用所有数据源。
+它会和[数据源基础功能](https://www.npmjs.com/package/cx-sources)一起安装，cx 通过数据源基础功能使用所有数据源。

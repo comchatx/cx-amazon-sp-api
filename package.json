@@ -1,6 +1,6 @@
 {
   "name": "cx-amazon-sp-api",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "description": "Checks orders, stock and fees, and edits listings and prices.",
   "license": "MIT",
   "author": "ComChatX",
@@ -33,6 +33,7 @@
   },
   "comchatx": {
     "name": "Amazon SP-API",
+    "nameZh": "亚马逊卖家接口",
     "about": "查订单、库存和费用，替你改 listing 和价格。",
     "mark": {
       "line": "layout"
