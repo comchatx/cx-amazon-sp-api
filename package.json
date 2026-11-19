@@ -143,7 +143,6 @@
     }
   },
   "dependencies": {
-    "cx-amazon-seller": "^0.1.7",
     "cx-sources": "^0.1.3"
   },
   "devDependencies": {
