@@ -1,4 +1,4 @@
-cx totals orders and sales by marketplace, finds FBA stock about to run out and listings Amazon flags, breaks down each transaction's fees, and changes listings and prices. It reads Amazon's SP-API, in the regions you authorise.
+Connect your Amazon store to cx so it can read your orders, listings, inventory, reports and finances in Seller Central, and make changes for you. cx totals orders and sales by marketplace, finds FBA stock about to run out and listings Amazon flags, breaks down each transaction's fees, and changes listings and prices. Useful for checking each day's sales, tracing fees and fixing listing problems. It connects through SP-API, Amazon's official interface for seller tools, in the regions you authorise.
 
 Some things you can ask:
 
@@ -13,7 +13,3 @@ On the plugin's Settings, connect a store for each region you sell in: North Ame
 ## What it costs
 
 Nothing. Neither Amazon nor ComChatX charges for it.
-
-## What it needs
-
-It installs with [Data Source Core](https://www.npmjs.com/package/cx-sources), through which cx reaches every data source.
