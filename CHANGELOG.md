@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.16
+
+- The `listing-check`, `low-stock` and `orders-today` templates each send their Try it sentence, word for word, then the words you type after the template's name.
+
 ## 0.1.15
 
 - The README's first paragraph, in Chinese, is the one signed on 2026-11-18 (「把你的亚马逊店铺连到 cx，……覆盖你在北美、欧洲和远东授权的站点。」), and in English the paragraph of the same meaning ("Connect your Amazon store to cx … in the regions you authorise.").
