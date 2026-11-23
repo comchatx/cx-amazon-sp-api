@@ -2,7 +2,7 @@
 
 ## 0.1.16
 
-- The `listing-check` and `orders-today` templates each send their Try it sentence, word for word, then the words you type after the template's name.
+- The `listing-check`, `low-stock` and `orders-today` templates each send their Try it sentence, word for word, then the words you type after the template's name.
 
 ## 0.1.15
 

@@ -6,14 +6,12 @@ import { body, typed } from "./pi.js";
 
 const ROOT = resolve(fileURLToPath(new URL("..", import.meta.url)));
 const names = Object.keys((JSON.parse(readFileSync(join(ROOT, "package.json"), "utf8")) as { comchatx: { prompts: Record<string, unknown> } }).comchatx.prompts);
-// Each of these templates still asks cx to hold back before it changes anything at Amazon, which its sentence does not say.
-const kept: readonly string[] = ["low-stock"];
 const sentence = (name: string): string => {
   const front = /^---\n([\s\S]*?)\n---\n/.exec(readFileSync(join(ROOT, "prompts", `${name}.md`), "utf8"))?.[1] ?? "";
   const value = /^description: (.*)$/m.exec(front)?.[1] ?? "";
   return value.startsWith('"') ? (JSON.parse(value) as string) : value;
 };
-const sent = names.filter((name) => !kept.includes(name));
+const sent = names;
 
 it("each template's body is its description word for word, then the seller's own words", () => {
   for (const name of sent) expect(body(readFileSync(join(ROOT, "prompts", `${name}.md`), "utf8")), name).toBe(`${sentence(name)} $@\n`);
